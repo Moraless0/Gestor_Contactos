@@ -1,4 +1,5 @@
-import json
+from gestion_contactos import agregar_contacto, eliminar_contacto, listar_contactos
+from utilidades import pedir_texto
 
 def mostrar_separador():
     print("==="*11)
@@ -10,45 +11,34 @@ def mostrar_menu():
     # 1- Agregar contacto nuevo
     # 2- Eliminar contacto
     # 3- Buscar un contacto
-    # 4- Mostrar contactos
+    # 4- Mostrar contactos 
     # 5- Salir del programa
     """)
     mostrar_separador()
 
-def seleccionar_opcion(n):
-    if n == 1:
-        print("opción #1")
-        agregar_contacto()
-    elif n == 2:
-        print("opción #2")
-    elif n == 3:
-        print("opción #3")
+def seleccionar_opcion():
+    while True:
+        mostrar_menu()
+        n = int(input("Ingrese un numero del 1-5: "))
+        if n == 1:
+            mostrar_separador()
+            print("Opcion #1")
+            print("Agregar un contacto nuevo")
+            mostrar_separador()
+            agregar_contacto()
+        elif n == 2:
+            print("Opcion #2")
+            eliminar_contacto()
+        elif n == 3:
+            print("Opcion #3")
+            listar_contactos()
+        elif n == 4:
+            print("Opcion #4")
 
-def agregar_contacto ():
-    nombre = input("Ingrese el nombre del contacto")
-    correo_electronico = input("Ingrese el correo electronico")
+        elif n == 5:
+            print("Saliendo del programa...")
+            break
+        else:
+            print("Valor incorrecto!")
+            pedir_texto("Pulse ENTER para intentar nuevamente.")
 
-    contacto = {
-        "nombre" : nombre, "correo" : correo_electronico
-    }
-
-    try:
-        with open("contactos.json", "r") as archivo:
-            datos = json.load(archivo)
-    
-    except:
-        datos = []
-        
-    datos.append(contacto)
-
-    with open("contactos.json", "w") as archivo:
-        json.dump(datos, archivo, indent=4)
-        
-
-       
-
-
-
-
-
-    
