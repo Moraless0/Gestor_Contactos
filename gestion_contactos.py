@@ -41,14 +41,32 @@ def eliminar_contacto ():
     with open("contactos.json", "w") as archivo:
         json.dump(nueva_lista, archivo, indent=4)
 
+def buscar_contacto(nombre_buscar):
+    try:
+        with open("contactos.json", "r") as archivo:
+            contactos = json.load(archivo)
+        
+        encontrado = False
+
+        for contacto in contactos:
+            if contacto["nombre"] == nombre_buscar:
+                print(f"Nombre: {contacto['nombre']} | Correo: {contacto['correo']}")
+                encontrado = True
+
+        if not encontrado:
+            print("No se encontro el contacto")
+
+    except:
+        print("Error al leer el archivo")
+
 def listar_contactos():
     try:
         with open("contactos.json", "r") as archivo:
             contactos = json.load(archivo)
         for contactos in contactos:
             print("Nombre:", contactos["nombre"], contactos["apellido"])
-            print("Numero de telefono:", contactos["numero"], "-" , contactos["numero_2"])
-            print("Correo Electronico:", contactos["correo"])
+            print("Numero de teléfono:", contactos["numero"], "-" , contactos["numero_2"])
+            print("Correo electrónico:", contactos["correo"])
             print("=="*15)
     except:
         print("No hay contactos")

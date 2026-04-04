@@ -1,5 +1,5 @@
-from funcionalidades_menu import mostrar_menu, seleccionar_opcion
+from funcionalidades_menu import mostrar_menu, seleccionar_opción
 
 mostrar_menu()
 
-seleccionar_opcion()
+seleccionar_opción()

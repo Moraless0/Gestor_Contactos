@@ -1,4 +1,4 @@
-from gestion_contactos import agregar_contacto, eliminar_contacto, listar_contactos
+from gestion_contactos import agregar_contacto, eliminar_contacto, listar_contactos, buscar_contacto
 from utilidades import pedir_texto
 
 def mostrar_separador():
@@ -16,25 +16,26 @@ def mostrar_menu():
     """)
     mostrar_separador()
 
-def seleccionar_opcion():
+def seleccionar_opción():
     while True:
         mostrar_menu()
         n = int(input("Ingrese un numero del 1-5: "))
         if n == 1:
             mostrar_separador()
-            print("Opcion #1")
+            print("opción #1")
             print("Agregar un contacto nuevo")
             mostrar_separador()
             agregar_contacto()
         elif n == 2:
-            print("Opcion #2")
-            eliminar_contacto()
+            print("opción #2")
+            eliminar_contacto(n)
         elif n == 3:
-            print("Opcion #3")
-            listar_contactos()
+            print("Opción #3 - Buscar contacto")
+            nombre = input("Ingrese el nombre a buscar: ").capitalize()
+            buscar_contacto(nombre)
         elif n == 4:
-            print("Opcion #4")
-
+            print("opción #4")
+            listar_contactos()
         elif n == 5:
             print("Saliendo del programa...")
             break
