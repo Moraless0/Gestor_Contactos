@@ -1,12 +1,5 @@
 [
     {
-        "nombre": "Henry",
-        "apellido": "Morales",
-        "correo": "Moraless06@hotmail.com",
-        "numero": "57140434",
-        "numero_2": ""
-    },
-    {
         "nombre": "Carlos",
         "apellido": "Ramirez",
         "correo": "carlos.ramirez@gmail.com",
@@ -88,6 +81,13 @@
         "apellido": "Wang",
         "correo": "Lesliwang@gmail.com",
         "numero": "50507080",
+        "numero_2": ""
+    },
+    {
+        "nombre": "Henry",
+        "apellido": "Morales",
+        "correo": "moraless06@hotmail.com",
+        "numero": "57140434",
         "numero_2": ""
     }
 ]

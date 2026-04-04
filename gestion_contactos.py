@@ -2,11 +2,11 @@ from utilidades import pedir_texto
 import json, os
 
 def agregar_contacto ():
-    nombre = input("Ingrese el nombre del contacto ").capitalize()
-    apellido = input("Ingrese el apellido ").capitalize()
-    correo_electrónico = input("Ingrese el correo electrónico ").capitalize()
-    numero = input("Ingrese el numero de teléfono")
-    numero_2 = input("Ingrese segundo numero")
+    nombre = input("Ingrese el nombre del contacto :").capitalize()
+    apellido = input("Ingrese el apellido :").capitalize()
+    correo_electrónico = input("Ingrese el correo electrónico :")
+    numero = input("Ingrese el numero de teléfono :")
+    numero_2 = input("Ingrese segundo numero :")
 
     contacto = {
         "nombre" : nombre, "apellido" : apellido, "correo" : correo_electrónico, "numero" : numero, "numero_2" : numero_2  }
@@ -50,11 +50,16 @@ def buscar_contacto(nombre_buscar):
 
         for contacto in contactos:
             if contacto["nombre"] == nombre_buscar:
-                print(f"Nombre: {contacto['nombre']} | Correo: {contacto['correo']}")
+                print(f"""
+Nombre: {contacto['nombre']}                           | 
+Apellido: {contacto['apellido']}                       | 
+Correo: {contacto['correo']}                           |
+Numero: {contacto['numero']}                           | 
+Numero 2: {contacto['numero_2']}""")
                 encontrado = True
 
         if not encontrado:
-            print("No se encontro el contacto")
+            print("No se encontró el contacto")
 
     except:
         print("Error al leer el archivo")

@@ -17,29 +17,34 @@ def mostrar_menu():
     mostrar_separador()
 
 def seleccionar_opción():
-    while True:
-        mostrar_menu()
-        n = int(input("Ingrese un numero del 1-5: "))
-        if n == 1:
-            mostrar_separador()
-            print("opción #1")
-            print("Agregar un contacto nuevo")
-            mostrar_separador()
-            agregar_contacto()
-        elif n == 2:
-            print("opción #2")
-            eliminar_contacto(n)
-        elif n == 3:
-            print("Opción #3 - Buscar contacto")
-            nombre = input("Ingrese el nombre a buscar: ").capitalize()
-            buscar_contacto(nombre)
-        elif n == 4:
-            print("opción #4")
-            listar_contactos()
-        elif n == 5:
-            print("Saliendo del programa...")
-            break
-        else:
-            print("Valor incorrecto!")
-            pedir_texto("Pulse ENTER para intentar nuevamente.")
-
+    try:
+        while True:
+            mostrar_menu()
+            n = int(input("Ingrese el numero del 1-5: "))
+            if n == 1:
+                mostrar_separador()
+                print("Opción #1")
+                print("Agregar un contacto nuevo")
+                mostrar_separador()
+                agregar_contacto()
+            elif n == 2:
+                print("Opcion #2")
+                eliminar_contacto()
+            elif n == 3:
+                print("Opción #3 - Buscar contacto")
+                nombre = input("Ingrese el nombre a buscar: ").capitalize()
+                buscar_contacto(nombre)
+            elif n == 4:
+                print("opción #4")
+                listar_contactos()
+            elif n == 5:
+                print("Saliendo del programa...")
+                break
+            else:
+                print("Valor incorrecto!")
+                pedir_texto("Pulse ENTER para intentar nuevamente.")
+    
+    except:
+        print("Invalido")
+            
+    
