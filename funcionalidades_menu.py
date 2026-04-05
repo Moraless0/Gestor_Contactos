@@ -42,9 +42,12 @@ def seleccionar_opción():
                 break
             else:
                 print("Valor incorrecto!")
+                print("Ingrese un valor del 1-5 ")
                 pedir_texto("Pulse ENTER para intentar nuevamente.")
-    
+
+                with open("error.txt", "a") as archivo:
+                    archivo.write(f"Usuario ingresa valor incorrecto = {n}\n*")
     except:
-        print("Invalido")
+        print("ERROR - INCORRECTO")
             
     

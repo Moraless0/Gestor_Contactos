@@ -56,6 +56,7 @@ Apellido: {contacto['apellido']}                       |
 Correo: {contacto['correo']}                           |
 Numero: {contacto['numero']}                           | 
 Numero 2: {contacto['numero_2']}""")
+                print("=="*15)
                 encontrado = True
 
         if not encontrado:
