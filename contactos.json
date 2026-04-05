@@ -84,6 +84,7 @@
         "numero_2": ""
     },
     {
+<<<<<<< HEAD
         "nombre": "Henry",
         "apellido": "Morales",
         "correo": "moraless06@hotmail.com",
@@ -109,6 +110,19 @@
         "apellido": "Motos",
         "correo": "pablomotos@gmail.com",
         "numero": "58402245",
+=======
+        "nombre": "Silvia",
+        "apellido": "Galindo",
+        "correo": "Silviagalindo45@hotmail.com",
+        "numero": "35391911",
+        "numero_2": ""
+    },
+    {
+        "nombre": "Raquel",
+        "apellido": "Morales",
+        "correo": "Raquelmorales@hotmail.com",
+        "numero": "32678098",
+>>>>>>> ae4429b83e89df1e86ae45757d6df1cad1fe373c
         "numero_2": ""
     }
 ]
