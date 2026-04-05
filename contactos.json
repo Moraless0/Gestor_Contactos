@@ -89,5 +89,19 @@
         "correo": "Lesliwang@gmail.com",
         "numero": "50507080",
         "numero_2": ""
+    },
+    {
+        "nombre": "Silvia",
+        "apellido": "Galindo",
+        "correo": "Silviagalindo45@hotmail.com",
+        "numero": "35391911",
+        "numero_2": ""
+    },
+    {
+        "nombre": "Raquel",
+        "apellido": "Morales",
+        "correo": "Raquelmorales@hotmail.com",
+        "numero": "32678098",
+        "numero_2": ""
     }
 ]

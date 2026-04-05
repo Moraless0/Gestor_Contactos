@@ -5,8 +5,8 @@ def agregar_contacto ():
     nombre = input("Ingrese el nombre del contacto ").capitalize()
     apellido = input("Ingrese el apellido ").capitalize()
     correo_electrónico = input("Ingrese el correo electrónico ").capitalize()
-    numero = input("Ingrese el numero de teléfono")
-    numero_2 = input("Ingrese segundo numero")
+    numero = input("Ingrese el numero de teléfono ")
+    numero_2 = input("Ingrese segundo numero ")
 
     contacto = {
         "nombre" : nombre, "apellido" : apellido, "correo" : correo_electrónico, "numero" : numero, "numero_2" : numero_2  }
